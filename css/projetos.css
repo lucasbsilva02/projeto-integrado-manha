@@ -1,0 +1,46 @@
+/** Definicao dos grid-area para cada grid-item.
+    Na maioria das páginas o layout de 3 colunas se mantém,
+    porém aqui temos uma coluna contatos (side-con-box) ocupando 1 espaço e a
+    coluna projetos (side-p-box) ocupando 2 espaços
+*/
+.head{grid-area: head;}
+.slideshow-container{grid-area: slide;}
+.dots-container{grid-area: dots}
+.side-con-box{grid-area: side-con-box;}
+.side-p-box{grid-area: side-p-box}
+.footer-l-box{grid-area: footer-l-box; background-color: #ddd;}
+.footer-c-box{grid-area: footer-c-box; background-color: #ddd;}
+.footer-r-box{grid-area: footer-r-box; background-color: #ddd;}
+.footer{grid-area: footer}
+
+.flex-container{display: flex;}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "head head head head head head head head head head head head"
+    "slide slide slide slide slide slide slide slide slide slide slide slide"
+    "dots dots dots dots dots dots dots dots dots dots dots dots"
+    "side-con-box side-con-box side-con-box side-con-box side-p-box side-p-box side-p-box side-p-box side-p-box side-p-box side-p-box side-p-box"
+    "footer-l-box footer-l-box footer-l-box footer-l-box footer-c-box footer-c-box footer-c-box footer-c-box footer-r-box footer-r-box footer-r-box footer-r-box"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-gap: 20px;
+}
+/** Aqui o design muda completamente usando somente uma coluna.
+    Observe que o box contato troca de lugar com quem somos.
+    o seletor @media é onde fazemos design responsivo*/
+@media(max-width: 700px){
+    .navbar-nav{display: none;}
+    .container{
+        grid-template-areas: 
+        "head"
+        "slide"
+        "dots"
+        "side-p-box"
+        "side-con-box"
+        "footer-l-box"
+        "footer-c-box"
+        "footer-r-box"
+        "footer";
+    }
+}
