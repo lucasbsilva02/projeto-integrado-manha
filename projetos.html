@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página principal da ONG">
+    <meta name="robots" content="ONG, projeto social">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/projetos.css">
+    <script src="main.js"></script>
+    <title>Projetos</title>
+</head>
+
+<body>
+    <!--contém todos os elementos da página em grids-->
+    <section class="container">
+        <!--grid-childs herdam display: grid; automaticamente de container-->
+        <header class="head grid-child">
+            <!--display: flex;-->
+            <nav class="navbar flex-container">
+                <span class="open-side">
+                    <a href="#" onclick="openSideMenu()">
+                        <svg width="30" height="30">
+                            <path d=" M0,5 30,5" stroke="#000" stroke-width="5" />
+                            <path d=" M0,14 30,14" stroke="#000" stroke-width="5" />
+                            <path d=" M0,23 30,23" stroke="#000" stroke-width="5" />
+                        </svg>
+                    </a>
+                </span>
+                <div class="navbar-nav flex-container">
+                    <div><a href="quem-somos.html">Quem somos</a></div>
+                    <div><a href="projetos.html">Projetos</a></div>
+                    <div><a href="doacoes.html">Doações</a></div>
+                    <div><a href="eventos.html">Eventos</a></div>
+                    <div><a href="fotos.html">Fotos</a></div>
+                    <div><a href="parceiros.html">Parceiros</a></div>
+                    <div><a href="contato.html">Contato</a></div>
+                </div>
+            </nav>
+            <div id="side-menu" class="side-nav">
+                <a href="#" class="btn-close" onclick="closeSideMenu()">&times;</a>
+                <div><a href="quem-somos.html">Quem somos</a></div>
+                <div><a href="projetos.html">Projetos</a></div>
+                <div><a href="doacoes.html">Doações</a></div>
+                <div><a href="eventos.html">Eventos</a></div>
+                <div><a href="fotos.html">Fotos</a></div>
+                <div><a href="parceiros.html">Parceiros</a></div>
+                <div><a href="contato.html">Contato</a></div>
+            </div>
+        </header>
+        <div class="slideshow-container grid-child">
+
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="images/banner_1.jpg" style="width:100%">
+                <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="images/banner_2.jpg" style="width:100%">
+                <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="images/banner_3.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="images/banner_4.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="images/banner_5.jpg" style="width:100%">
+                <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+
+        <div style="text-align:center" class="dots-container grid-child">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+        </div>
+        <div class="side-con-box grid-child">
+            <h2>Contato</h2>
+            <p>
+                <span>Email:</span> <a href="mailto:casa@casadacriancasantoamaro.org.br">casa@casadacriancasantoamaro.org.br</a>
+                <br>
+                <span>Telefone:</span> 55 11 5686.3288 / 3624.2660 <br>
+                <span>Fax: </span> 55 11 5686.3288 <br>
+                <span>Endereço:</span> Rua Padre Chico, 320 - Santo Amaro - SP
+            </p>
+            <a href="doacoes.html">Faça sua doação aqui</a> <br>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29236.286553800397!2d-46.696701!3d-23.656789!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5044e9cd157d%3A0xbf3e2ecf9acf3808!2sR.+Padre+Chico%2C+320+-+Santo+Amaro%2C+S%C3%A3o+Paulo+-+SP%2C+04662-000!5e0!3m2!1spt-BR!2sbr!4v1543680828387"
+                    width="450" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            </div>
+            <figure>
+                <img src="images/banner_casa_da_crianca.jpg" alt="banner_casa_da_crianca">
+            </figure>
+        </div>
+        <div class="side-p-box grid-child" style="padding:20px;">
+            <h2>Projetos</h2>
+            <img src="images/projetos-o.jpg" alt="projeto-o">
+            <p>
+                <strong>O Centro da Criança e do Adolescente - CCA/SEMEAR atendemos uma </strong> 
+                média de 70 crianças e adolescentes (06 a 14 anos) por ano em situação 
+                de vulnerabilidade e risco, contribuindo na sua proteção integral em 
+                conjunto com a família e Estado, promovendo o desenvolvimento de suas 
+                potencialidades, a partir de ações sócio educativas. 
+            </p>
+            <strong>ATIVIDADES</strong> <br>
+            <p>A Casa da Criança e do Adolescente oferece atividades como: </p>
+            <ul>
+                <li>Esportes e Recreação</li>
+                <li>Cidadania, Valores, Direitos e Deveres</li>
+                <li>Ensino de Informática</li>
+                <li>Atendimento Psicológico</li>
+                <li>Sensibilização Ambiental</li>
+                <li>Passeios Culturais</li>
+                <li>Ensino de Música</li>
+                <li>Aulas de Inglês</li>
+            </ul>
+            <img src="images/projetos-a.jpg" alt="projeto-a">
+        </div>
+        <div class="footer-l-box grid-child">
+            <p>
+                <strong>Casa da Criança e Adolescente Santo Amaro Grossarl</strong> <br>
+                Grossarl Rua Padre Chico, 320 <br>
+                Santo Amaro - São Paulo - SP / CEP: 04747-090 <br>
+                <span>Email: </span> <a href="mailto:casa@casadacriancasantoamaro.org.br">casa@casadacriancasantoamaro.org.br</a>
+                <br>
+                <span>Telefones: </span> 55 11 5686.3288 / 3624.2660 <br>
+                <span>Fax: </span> 55 11 5686.3288
+            </p>
+        </div>
+        <div class="footer-c-box grid-child">
+            <p>
+                <strong>Registros Institucionais:</strong>
+                - Utilidade Pública Federal Portaria nº1026 de 09/01/01 Publ. DOE 12/11/01
+                - Utilidade Pública Federal Portaria n44.732 de 29/02/00 Publ. DOE 01/03/00
+            </p>
+        </div>
+        <div class="footer-r-box grid-child">
+            <p>
+                <strong>Siga-nos!</strong>
+            </p>
+            <div class="flex-container social-bullets">
+                <figure>
+                    <a href="http://www.facebook.com/home.php#!/profile.php?id=100001404329102" target="_blank">
+                        <img src="images/facebook-circular-logo.svg" alt="facebook-circular-logo">
+                        <figcaption>Facebook</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="http://twitter.com/casadacriancasa" target="_blank">
+                        <img src="images/twitter-logo-button.svg" alt="twitter-logo-button">
+                        <figcaption>Twitter</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="http://www.flickr.com/photos/casadacrianca/" target="_blank">
+                        <img src="images/flickr-circle-logo.svg" alt="flickr-circle-logo">
+                        <figcaption>Flickr</figcaption>
+                    </a>
+                </figure>
+                <figure>
+                    <a href="http://www.linkedin.com" target="_blank">
+                        <img src="images/linkedin-button.svg" alt="linkedin-button">
+                        <figcaption>Linkedin</figcaption>
+                    </a>
+                </figure>
+            </div>
+        </div>
+        <footer class="footer grid-child">
+            <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a
+                    href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"
+                    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+        </footer>
+    </section>
+</body>
+<script>
+    var slideIndex = 1;
+
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName('mySlides');
+        var dots = document.getElementsByClassName('dot');
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(' active', '');
+        }
+        slides[slideIndex - 1].style.display = 'block';
+        dots[slideIndex - 1].className += ' active';
+    }
+</script>
+
+</html>

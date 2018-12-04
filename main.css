@@ -1,0 +1,212 @@
+*{box-sizing: border-box;}
+body{
+    font-family: Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+.head{grid-area: head;}
+.slideshow-container{grid-area: slide;}
+.dots-container{grid-area: dots}
+.side-l-box{grid-area: side-l-box}
+.side-c-box{grid-area: side-c-box}
+.side-r-box{grid-area: side-r-box}
+.footer-l-box{grid-area: footer-l-box; background-color: #ddd;}
+.footer-c-box{grid-area: footer-c-box; background-color: #ddd;}
+.footer-r-box{grid-area: footer-r-box; background-color: #ddd;}
+.footer{grid-area: footer}
+/*Alternativa para o float:left;*/
+.flex-container{display: flex;}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+        "head head head head head head head head head head head head"
+        "slide slide slide slide slide slide slide slide slide slide slide slide"
+        "dots dots dots dots dots dots dots dots dots dots dots dots"
+        "side-l-box side-l-box side-l-box side-l-box side-c-box side-c-box side-c-box side-c-box side-r-box side-r-box side-r-box side-r-box"
+        "footer-l-box footer-l-box footer-l-box footer-l-box footer-c-box footer-c-box footer-c-box footer-c-box footer-r-box footer-r-box footer-r-box footer-r-box"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    /*grid-gap: 20px;*/
+    /*background-color: darkgoldenrod;*/
+}
+/*.container > .grid-child{background-color: darkgreen;}*/
+.navbar{
+    /*background-color: darkmagenta;*/
+    height: 60px;
+}
+.navbar a{
+    display: block;
+    color: #000;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/*hamburger*/
+/*.open-side{background-color: crimson;}*/
+/*estilização do menu horizontal*/
+/*
+.navbar-nav{
+    background-color: burlywood;
+}*/
+.navbar-nav a{margin: 5px 0 0 50px;}
+.navbar-nav a:hover{
+    background-color: #f2f2f2;
+}
+/*menu vertical*/
+.side-nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1a1a1a;
+    opacity: 0.9;
+    overflow-x: hidden;
+    padding-top: 60px;
+}
+.side-nav a{
+    padding: 10px 10px 10px 30px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #ccc;
+    display: block;
+}
+.side-nav a:hover{
+    color: #fff;
+}
+.side-nav .btn-close{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 36px; 
+    margin-left: 50px;
+}
+@media(max-width: 700px){
+    .navbar-nav{display: none;}
+    .container{
+        grid-template-areas: 
+        "head"
+        "slide"
+        "dots"
+        "side-l-box"
+        "side-c-box"
+        "side-r-box"
+        "footer-l-box"
+        "footer-c-box"
+        "footer-r-box"
+        "footer";
+    }
+}
+/*slideshow - W3schools.com*/
+.mySlides {display: none;}
+img {vertical-align: middle; }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.social-bullets figure{
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+/*.social-bullets figure:first-child{margin-left: 20%}*/
+.social-bullets figure img{
+    width: 45px;
+    height: 45px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.footer{
+    text-align: center;
+}
